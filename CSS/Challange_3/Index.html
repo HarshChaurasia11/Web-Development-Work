@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challange 3 : Card Grid</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+
+        main {
+            margin: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            text-align: center;
+            padding: 15px;
+            background-color: bisque;
+            min-height: 80vh;
+            border: 2px solid black;
+            border-radius: 25px;
+            transition: transform 0.3s ease-in;
+        }
+
+        .card:hover {
+            transform: scale(102%);
+        }
+
+        img {
+            border: 5px dashed black;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        img:hover {
+            /* 0px (Pehla): Horizontal offset (Shadow ko left/right nahi khiskana hai).
+            0px (Dusra): Vertical offset (Shadow ko up/down nahi khiskana hai).
+            20px (Tisra): Blur radius (Shadow kitni dhundli/soft dikhegi).
+            5px (Chautha): Spread radius (Shadow chaaron taraf kitni bahar tak failegi).
+            blueviolet : Shadow ka rang (Black color, 30% opacity ke sath). */
+            box-shadow: 0px 0px 20px 5px blueviolet;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .about {
+            padding: 10px;
+            /* element ka andar sabhi items ko center karna ka liya */
+            text-align: center;
+        }
+
+        .name {
+            font-size: 25px;
+
+        }
+
+        button {
+            font-size: 25px;
+            padding: 5px 20px;
+            background-color: beige;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 5px 5px 5px rebeccapurple;
+        }
+
+
+        button:hover {
+            background-color: rgb(148, 55, 55);
+            color: white;
+        }
+
+        button:active {
+            box-shadow: 5px 5px 5px rgb(47, 230, 47);
+            background-color: blueviolet;
+            color: black;
+        }
+
+        @media screen and (min-width: 780px) and (max-width: 1024px) {
+            main {
+                grid-template-columns: 1fr 1fr;
+
+            }
+        }
+
+        @media screen and (max-width: 780px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="card card_1">
+            <div class="image"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK9a9fCxtvNDFhh3fx10P2jAaFVt7nE8a_Jpip6qPYQQ&s=10"
+                    width="300px" height="300px" alt=""></div>
+            <div class="about">
+                <h1 class="heading">Profile 1</h1>
+                <div class="name"><b>Name : </b>Yash Raj</div>
+                <p class="para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, qui! Voluptatem, minus, quidem
+                    earum modi asperiores culpa corrupti doloremque similique dicta ducimus sapiente reprehenderit.
+                    Omnis.
+                </p>
+                <button>Submit</button>
+
+            </div>
+        </div>
+        <div class="card card_2">
+            <div class="image"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS-1-TC5ul_Dxo1EDVs2DT99ZIOixswQ4M765QoQhq-Q&s=10"
+                    width="300px" height="300px" alt=""></div>
+            <div class="about">
+                <h1 class="heading">Profile 2</h1>
+                <div class="name"><b>Name : </b>Dasy</div>
+                <p class="para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, qui! Voluptatem, minus, quidem
+                    earum modi asperiores culpa corrupti doloremque similique dicta ducimus sapiente reprehenderit.
+                    Omnis.
+                </p>
+                <button>Submit</button>
+
+            </div>
+        </div>
+        <div class="card card_3">
+            <div class="image"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbkXp6HNl6iofI7VpsS1fTMRqO-FLf-oWzsaMpN7H4Cw&s=10"
+                    width="300px" height="300px" alt=""></div>
+            <div class="about">
+                <h1 class="heading">Profile 3</h1>
+                <div class="name"><b>Name : </b>Prem</div>
+                <p class="para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, qui! Voluptatem, minus, quidem
+                    earum modi asperiores culpa corrupti doloremque similique dicta ducimus sapiente reprehenderit.
+                    Omnis.
+                </p>
+                <button>Submit</button>
+
+            </div>
+        </div>
+        <div class="card card_4">
+            <div class="image"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXZWWTNQpnLjLAEKGXvlFuv4qHU-SHE2ZkfivBqAUzeA&s=10"
+                    width="300px" height="300px" alt=""></div>
+            <div class="about">
+                <h1 class="heading">Profile 4</h1>
+                <div class="name"><b>Name : </b>Raj</div>
+                <p class="para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, qui! Voluptatem, minus, quidem
+                    earum modi asperiores culpa corrupti doloremque similique dicta ducimus sapiente reprehenderit.
+                    Omnis.
+                </p>
+                <button>Submit</button>
+
+            </div>
+        </div>
+        <div class="card card_5">
+            <div class="image"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeChJV1UqgB0NmxpoP5x6Q2g_8EV_qVUXRHnT06LOsUw&s=10"
+                    width="300px" height="300px" alt=""></div>
+            <div class="about">
+                <h1 class="heading">Profile 5</h1>
+                <div class="name"><b>Name : </b>Sameer</div>
+                <p class="para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, qui! Voluptatem, minus, quidem
+                    earum modi asperiores culpa corrupti doloremque similique dicta ducimus sapiente reprehenderit.
+                    Omnis.
+                </p>
+                <button>Submit</button>
+
+            </div>
+        </div>
+        <div class="card card_6">
+            <div class="image"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpz1HmvTYQHa5Y_lfndx5fZakKggBSkpv81Qtw_EbccQ&s=10"
+                    width="300px" height="300px" alt=""></div>
+            <div class="about">
+                <h1 class="heading">Profile 6</h1>
+                <div class="name"><b>Name : </b>Prati</div>
+                <p class="para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, qui! Voluptatem, minus, quidem
+                    earum modi asperiores culpa corrupti doloremque similique dicta ducimus sapiente reprehenderit.
+                    Omnis.
+                </p>
+                <button>Submit</button>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

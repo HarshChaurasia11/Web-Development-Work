@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challange 1 da: Create a card</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .inside {
+            background-color: rgba(135, 134, 134, 0.386);
+            display: flex;
+            height: 100vh;
+            max-width: 100vw;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card {
+            background-color: azure;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            /* pahala maina sirf transform use kiya tha phir maina card ma transition bhi add kiya jissa hover smooth kiya  */
+            transform: scale(105%);
+
+        }
+
+        img {
+            margin: 15px;
+            border-radius: 10px;
+
+        }
+
+        .one {
+            font-size: 20px;
+            margin: 15px;
+        }
+
+        button {
+            align-self: center;
+            padding: 5px 10px;
+            width: 150px;
+            border-radius: 5px;
+            box-shadow: 3px 5px 5px skyblue;
+
+        }
+
+        button:hover {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inside">
+        <div class="card">
+            <div class="img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwZrgG15jPYp8xHYOsME_TAs1DH0ww9C9uC5Hjq25eRA&s=10"
+                    width="270px" alt="">
+
+            </div>
+            <div class="name one">
+                <b>Name : </b>Harsh Chaurasia
+            </div>
+            <div class="short_bio one">
+                <b>Short Bio : </b> I am a Future Developer
+            </div>
+            <button class="one">Follow</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

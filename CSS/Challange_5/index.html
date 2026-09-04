@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 5: Responsive Dashboard UI</title>
+    <style>
+        :root {
+            --main-bg-color: radial-gradient(white, teal);
+            --nav-bg-color: #8787b7;
+            --nav-color: #1D1D1F;
+            --aside-bg-color: linear-gradient(skyblue, khaki);
+            --bg-color: white;
+            --text-color: black;
+            --card-color: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+
+        /* when I use theme dark this root is toggle */
+        body:has(#theme-toggle:checked) {
+            --main-bg-color: radial-gradient(navy, #040720);
+            --nav-bg-color: #858484;
+            --nav-color: #E8E8ED;
+            --aside-bg-color: linear-gradient(#1c1c1c, purple, #34282C);
+            --bg-color: #121212;
+            --text-color: white;
+            --card-color: linear-gradient(135deg, #1e3c72, #2d66c8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* they give space to all container  */
+        .dashboard_container {
+            display: grid;
+            grid-template-columns: 1fr 6fr;
+            grid-template-areas: "nav nav"
+                "aside main"
+                "aside main ";
+        }
+
+
+        /* Styling navigation container  */
+        nav {
+            background-color: var(--nav-bg-color);
+            color: var(--nav-color);
+            grid-area: nav;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5em;
+            border-bottom: 2px solid var(--text-color);
+            font-size: 25px;
+        }
+
+        .nav_one {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            gap: 5vw;
+            padding-left: 5vw;
+        }
+
+        .nav_two {
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            padding-right: 5vw;
+            gap: 5vw;
+        }
+
+        /* styling aside using below code  */
+        aside {
+            background-image: var(--aside-bg-color);
+            border-right: 2px solid var(--text-color);
+            grid-area: aside;
+            min-height: 95vh;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        ul>li {
+            padding-top: 5vh;
+            cursor: pointer;
+        }
+
+        ul>li:hover {
+            text-decoration: underline;
+        }
+
+        /* Styling main content to this code  */
+        main {
+            grid-area: main;
+            text-align: center;
+            background-image: var(--main-bg-color);
+        }
+
+        .main_head {
+            font-size: 3em;
+            padding-top: 1.5em;
+        }
+
+        .main_head:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .cards_head {
+            font-size: 2.4em;
+            margin: 5vh 0px;
+        }
+
+        .cards_head:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 0px 4em;
+            justify-content: center;
+            align-items: center;
+            gap: 5vw;
+        }
+
+
+        .card {
+            min-height: 20vh;
+            background-image: var(--card-color);
+            border: 2px solid var(--text-color);
+            border-radius: 15px;
+            padding: 1em;
+            transition: transform 0.3s ease-in;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card_head {
+            font-size: 2.2em;
+            cursor: pointer;
+        }
+
+        .card_head:hover {
+            text-decoration: underline;
+        }
+
+        .card_number {
+            font-size: 1.8em;
+            color: khaki;
+            padding: 1em 0px;
+        }
+
+        .card_btn {
+            font-size: 1em;
+            letter-spacing: 2px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        /* started large container  */
+
+        .large_container {
+            width: 70%;
+            margin: 8vh auto;
+            border: 2px solid var(--text-color);
+            border-radius: 20px;
+            background-image: var(--card-color);
+            transition: transform 1s ease;
+        }
+
+        .large_container:hover {
+            transform: scale(102%);
+        }
+
+        .large_head {
+            font-size: 40px;
+            padding: 0.5em 0px;
+        }
+
+        .large_head:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .large_container>img {
+            width: min(750px, 70%);
+            border-radius: 30px;
+            padding: 5px;
+        }
+
+        .joinOrder {
+            font-size: 25px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0.5em 0px;
+        }
+
+        .btn_joinOdr {
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 0.3em 1em;
+            letter-spacing: 2px;
+        }
+
+
+
+        button:hover {
+            cursor: pointer;
+            background-color: maroon;
+            color: antiquewhite;
+
+        }
+
+        @media screen and (min-width: 680px) and (max-width: 1024px) {
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width: 680px) {
+            .dashboard_container {
+                grid-template-columns: 1fr;
+                grid-template-areas: "nav"
+                    "aside"
+                    "main";
+            }
+
+            aside {
+                min-height: auto;
+                padding-bottom: 5vh;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard_container">
+        <nav class="navbar ">
+            <div class="nav_one">
+                <div>☰</div>
+                <div><img
+                        src="https://static.vecteezy.com/system/resources/previews/009/481/029/non_2x/geometric-icon-logo-geometric-abstract-element-free-vector.jpg"
+                        height="40em" alt=""></div>
+            </div>
+            <div class="nav_two">
+                <div>🔔</div>
+                <div>👤 Harsh</div>
+                <!-- this input element is used to use dark and light mode using css -->
+                <div>
+                    <label for="theme-toggle">🌙 Theme</label>
+                    <input type="checkbox" id="theme-toggle">
+                </div>
+            </div>
+
+        </nav>
+
+
+        <!-- aside element is used to show feature as side of the window screen -->
+        <aside>
+            <ul type="none">
+                <li>Home</li>
+                <li>Analytics</li>
+                <li>Users</li>
+                <li>Orders</li>
+                <li>Profile</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+
+        <main>
+            <div class="main_head">
+                Welcome ! to my Dashboard Challange.
+            </div>
+            <div class="cards_head">
+                Statistic Cards
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card_head">Users</div>
+                    <div class="card_number">1,250</div>
+                    <button class="card_btn">Details</button>
+                </div>
+                <div class="card">
+                    <div class="card_head">Sales</div>
+                    <div class="card_number">₹50,000</div>
+                    <button class="card_btn">Details</button>
+                </div>
+                <div class="card">
+                    <div class="card_head">Orders</div>
+                    <div class="card_number">320</div>
+                    <button class="card_btn">Details</button>
+                </div>
+            </div>
+            <div class="large_container">
+                <div class="large_head">Recent Activity</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg7n10HgU0XpOPW5wqJFolV56T9kYvAbIqDEitnQjKqA&s=10"
+                    alt="">
+                <div class="joinOrder">
+                    <div class="joined_contant">AS Joining</div>
+                    <button class="btn_joinOdr">Joined</button>
+                </div>
+                <div class="joinOrder">
+                    <div class="order_contant">Place Order</div>
+                    <button class="btn_joinOdr">Order</button>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</body>
+
+</html>

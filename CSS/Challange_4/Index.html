@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challange 4 : Real World Landing Page</title>
+    <style>
+        body {
+            min-height: 150vh;
+            background-image: linear-gradient(bisque, skyblue);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .created_by {
+            padding: 5px;
+            background-color: lightgrey;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .created_by:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            position: sticky;
+            top: 0%;
+
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0.2% 0px;
+            padding: 4px 5vw;
+        }
+
+        .nav_menu {
+            display: flex;
+            flex-direction: row;
+            font-size: 25px;
+            gap: 5vw;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+
+        a:active {
+            color: red
+        }
+
+        .floating {
+            position: fixed;
+            right: 5vw;
+            bottom: 5vh;
+            border: 2px solid black;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+
+        .floating:hover {
+            box-shadow: 0px 0px 20px 2px blue;
+        }
+
+        .main_1 {
+            min-height: 60vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: self-start;
+            justify-content: center;
+        }
+
+        .welcome {
+            font-size: clamp(30px, 5vw, 60px);
+            padding-left: 20vw;
+            margin: 10px;
+        }
+
+        .future {
+            font-size: 45px;
+            padding-left: 20vw;
+            margin: 10px;
+        }
+
+        .btn_1 {
+            align-self: center;
+            margin-top: 1em;
+            font-size: 30px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .btn_1:hover {
+            box-shadow: 0px 0px 10px 3px palevioletred;
+        }
+
+        .main_2 {
+            min-height: 70vh;
+            margin: 20px 0px;
+        }
+
+        .ourServices {
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 8vh;
+        }
+
+        .cards {
+            width: 80vw;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5vw;
+
+        }
+
+        .card {
+            border-radius: 40px;
+            /* mi-height: 60vh; */
+            border: 3px solid black;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-image: linear-gradient(pink, white);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .img_2 {
+            border: 3px dashed black;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+
+        .img_2:hover {
+            box-shadow: 0px 0px 20px 5px blueviolet;
+        }
+
+        .heading_2 {
+            font-size: 35px;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .heading_2:hover {
+            text-decoration: underline;
+        }
+
+        .disp_about {
+            font-size: 20px;
+        }
+
+        .button_2 {
+            font-size: 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 5px 15px;
+            margin: 20px 0px;
+            border: none;
+            background-color: pink;
+        }
+
+        .button_2:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .button_2:active {
+            background-color: red;
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: center;
+            padding: 5vh 0px;
+            gap: 5vw;
+            justify-content: space-around;
+            width: 80vw;
+            margin: auto;
+            font-size: 30px;
+        }
+
+
+        @media screen and (min-width: 680px) and (max-width: 1024px) {
+            .cards {
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            footer {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width: 680px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="created_by">Harsh Chaurasia</div>
+    <hr>
+    <img class="floating"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmXAD16LgWOcPJYW_pickcBBo8MhrnEgOdQeHBYqHGyCGIk1PcWSN9pXg&s=10"
+        width="80px" height="70px" alt="">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmXAD16LgWOcPJYW_pickcBBo8MhrnEgOdQeHBYqHGyCGIk1PcWSN9pXg&s=10"
+                    style="border-radius: 100px;" width="50px" alt="">
+            </div>
+            <ul class="nav_menu" type="none">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="main_1">
+        <div class="welcome">Welcome ! to My Website</div>
+        <div class="future">I am a future Developer !</div>
+
+        <button class="btn_1">Get Started</button>
+    </main>
+    <main class="main_2">
+        <div class="ourServices">Our Services</div>
+        <div class="cards">
+            <div class="card card_1">
+                <img src="https://img.magnific.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?semt=ais_hybrid&w=740&q=80"
+                    width="250px" height="250px" class="img_2" alt="">
+                <div class="discription">
+                    <div class="heading_2">Web Development</div>
+                    <div class="disp_about">Web development is the process of building, creating, and maintaining
+                        websites and web applications that run online.</div>
+                    <button class="button_2">Submit</button>
+
+                </div>
+            </div>
+            <div class="card card_2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHqZcyjBMJkEpXfOaaTHyT35uMMqBWTa3rCwNFVxBNpQ&s=10"
+                    height="250px" class="img_2" alt="">
+                <div class="discription">
+                    <div class="heading_2">AI & ML</div>
+                    <div class="disp_about">Artificial Intelligence and Machine Learning (AI/ML) enable computer systems
+                        to perform complex tasks and learn from data without explicit programming.</div>
+                    <button class="button_2">Submit</button>
+
+                </div>
+            </div>
+            <div class="card card_3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR07LdlmbbkKjgvy33CPbhzUSlZlXG50sVskm6bTNS6vA&s=10"
+                    width="250px" height="250px" class="img_2" alt="">
+                <div class="discription">
+                    <div class="heading_2">Linux</div>
+                    <div class="disp_about">Linux is a free, open-source operating system that powers everything from
+                        smartphones and household appliances to the world's fastest supercomputers</div>
+                    <button class="button_2">Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Contact</a>
+    </footer>
+
+</body>
+
+</html>

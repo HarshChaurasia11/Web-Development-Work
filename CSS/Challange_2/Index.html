@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challange 2 : Responsive Navigation Bar</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 150vh;
+        }
+
+        header {
+            position: sticky;
+            top: 0px;
+            background-color: bisque;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0px;
+            align-items: center;
+        }
+
+        .ul {
+            display: flex;
+            gap: 5vw;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width : 980px) {
+            body {
+                background-color: red;
+            }
+
+            .nav {
+                flex-direction: column;
+            }
+
+            .ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            header {
+                width: 20vw;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="nav">
+                <div><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmXAD16LgWOcPJYW_pickcBBo8MhrnEgOdQeHBYqHGyCGIk1PcWSN9pXg&s=10"
+                        width="50px" alt=""></div>
+                <ul class="ul" type="none">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>
