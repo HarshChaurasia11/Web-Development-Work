@@ -1,0 +1,363 @@
+:root {
+    --header-bg-color: #bdb7af;
+    --font-color: #292725;
+    --bg-color: radial-gradient(#F7F5F2, #E5DFD7);
+    --logo-shadow: rgb(78, 53, 91);
+    --card-bg-color: linear-gradient(rgb(219, 194, 161), rgb(251, 239, 217));
+}
+
+body:has(#theme-toggle:checked) {
+    --header-bg-color: #494c4f;
+    --font-color: white;
+    --bg-color: radial-gradient(#787c7d, #0a0a0a);
+    --logo-shadow: antiquewhite;
+    --card-bg-color: linear-gradient(grey, black);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.fixed_logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5vh;
+    right: 3vw;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.fixed_logo:hover {
+    box-shadow: 0px 0px 20px 5px var(--logo-shadow);
+    animation: floating 2s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+body {
+    min-height: 200vh;
+    background-image: var(--bg-color);
+    color: var(--font-color);
+    padding-bottom: 5vh;
+    
+}
+
+header {
+    z-index: 1;
+    background-color: var(--header-bg-color);
+    color: var(--font-color);
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding: 10px 0px;
+    cursor: pointer;
+    position: sticky;
+    top: 0px;
+}
+
+header>img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+header>img:hover {
+    box-shadow: 0px 0px 20px 5px var(--logo-shadow);
+
+}
+
+ul {
+    display: flex;
+    gap: 5vw;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+ul>li:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+ul>li:active {
+    color: red;
+}
+
+.its {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    font-size: 3em;
+    gap: 15px;
+    cursor: pointer;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+    animation: slideDown 3s ease;
+
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.one {
+    z-index: 0;
+    margin-top: 5vh;
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding: 5vh 0px;
+    border-bottom: 3px solid black;
+}
+
+
+
+.intro {
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.intro:hover {
+    text-decoration: underline;
+
+}
+
+.project_5>img {
+    cursor: pointer;
+    border-radius: 25px;
+    transition: transform 0.5s ease-in;
+    margin-top: 5vh;
+    width: 70vw;
+}
+
+.project_5>img:hover {
+    transform: scale(101%);
+    border: 2px solid black;
+    box-shadow: 0px 0px 20px 5px var(--logo-shadow);
+}
+
+
+
+.two {
+    text-align: center;
+    width: 90vw;
+    padding-bottom: 5vh;
+    margin: 5vh auto;
+    border-bottom: 3px solid black;
+}
+
+
+.about {
+    font-size: 40px;
+    font-weight: 500;
+    padding: 5vh;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.two_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "AboutImg AboutText";
+    align-items: center;
+}
+
+
+
+.profileImg>img {
+    grid-area: AboutImg;
+    height: 35vh;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in;
+    cursor: pointer;
+}
+
+.profileImg>img:hover {
+    border: 5px dashed black;
+    box-shadow: 0px 0px 20px 5px var(--logo-shadow);
+    transform: scale(102%);
+}
+
+.shortIntro {
+    grid-area: AboutText;
+    font-size: 25px;
+}
+
+.three{
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 5vh;
+    border-bottom: 3px solid black;
+}
+
+.threeHead{
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5vw;
+    margin: 5vh 0px;
+
+}
+
+.card{
+    position: relative;
+    border: 2px solid black;
+    min-height: 30vh;
+    border-radius: 20px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: var(--card-bg-color);
+    transition: transform 0.3s ease-in;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+    background-color: rgb(240, 238, 240);
+
+    top: 15px;
+    right: 15px;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+
+    width: 50%;
+    height: 4px;
+
+    background-color: black;
+    bottom: 10px;
+    left: 25%;
+
+    border-radius: 10px;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px 5px var(--logo-shadow);
+}
+
+.cardImg{
+
+    width: 80%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+}
+
+.cardImg:hover{
+    transform: scale(102%);
+    border: 3px solid black;
+}
+
+.cardHead{
+    font-size: 1.9em;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+
+.cardHead:hover{
+    text-decoration: underline;
+}
+
+.card_content{
+    font-size: 20px;
+    padding-bottom: 20%;
+}
+
+.cardButton{
+    font-size: 20px;
+    padding: 5px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cardButton:hover{
+    box-shadow: 0px 0px 10px 5px var(--logo-shadow);
+}
+
+
+footer{
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+footer > a{
+    font-size: 25px;
+    text-decoration: none;
+    color:var(--font-color);
+}
+
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+    .two_content {
+        grid-template-columns: 1fr;
+        gap: 5vh;
+        grid-template-areas: "AboutImg"
+            "AboutText";
+    }
+
+    .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+    .two_content {
+        grid-template-columns: 1fr;
+        gap: 5vh;
+        grid-template-areas: "AboutImg"
+                            "AboutText";
+    }
+
+    .cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+}
