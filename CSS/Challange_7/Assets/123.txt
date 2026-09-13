@@ -1,0 +1,57 @@
+┌─────────────────────────────────────────────────────┐
+│                     NAVBAR                          │
+│  TechKart | Search Bar | Login | Wishlist | Cart    │
+├─────────────────────────────────────────────────────┤
+│                   CATEGORY NAV                      │
+│ Phones | Laptops | Headphones | Watches | Gaming    │
+├─────────────────────────────────────────────────────┤
+│                                                     │
+│                   HERO SECTION                      │
+│                                                     │
+│          Upgrade Your Tech Experience               │
+│                                                     │
+│        [ Shop Now ]       [ Explore Deals ]         │
+│                                                     │
+├─────────────────────────────────────────────────────┤
+│                  SHOP BY CATEGORY                   │
+│                                                     │
+│    📱            💻           🎧          ⌚        │
+│   Phones        Laptops     Audio       Watches     │
+│                                                     │
+├─────────────────────────────────────────────────────┤
+│                  FEATURED PRODUCTS                  │
+│                                                     │
+│  ┌────────┐  ┌────────┐  ┌────────┐  ┌────────┐    │
+│  │ Image  │  │ Image  │  │ Image  │  │ Image  │    │
+│  │ Name   │  │ Name   │  │ Name   │  │ Name   │    │
+│  │ Price  │  │ Price  │  │ Price  │  │ Price  │    │
+│  │ Button │  │ Button │  │ Button │  │ Button │    │
+│  └────────┘  └────────┘  └────────┘  └────────┘    │
+│                                                     │
+├─────────────────────────────────────────────────────┤
+│                    BIG OFFER                        │
+│                                                     │
+│              UP TO 50% OFF                          │
+│              On Selected Gadgets                    │
+│                                                     │
+│                   [ Shop Now ]                      │
+│                                                     │
+├─────────────────────────────────────────────────────┤
+│                    NEW ARRIVALS                     │
+│                                                     │
+│       Product Cards Grid                            │
+│                                                     │
+├─────────────────────────────────────────────────────┤
+│                 WHY CHOOSE TECHKART                 │
+│                                                     │
+│    🚚              🛡️              ⭐              │
+│  Fast Delivery   Secure Payment   Quality Products  │
+│                                                     │
+├─────────────────────────────────────────────────────┤
+│                      FOOTER                         │
+│                                                     │
+│  TechKart      Quick Links      Customer Support    │
+│  Description   Home             Contact            │
+│                Products         FAQ                │
+│                About                                  │
+└─────────────────────────────────────────────────────┘
