@@ -1,4 +1,3 @@
-
 * {
     padding: 0;
     margin: 0;
@@ -10,11 +9,11 @@
 
 body {
     min-height: 200vh;
-    padding-bottom: 5vh;
+    /* padding-bottom: 5vh; */
     background: linear-gradient(290deg, #2C3E50, #4CA1AF);
 }
 
-.fixed-logo{
+.fixed-logo {
     position: fixed;
     bottom: 5vh;
     right: 3vw;
@@ -27,7 +26,7 @@ body {
     z-index: 10;
 }
 
-.fixed-logo:hover{
+.fixed-logo:hover {
     box-shadow: 0px 0px 20px 5px #ADA996;
 }
 
@@ -35,6 +34,9 @@ body {
 
 
 .nav_menu {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
     background-image: var(--nav-menu-bg-color);
     display: flex;
     flex-direction: row;
@@ -45,7 +47,7 @@ body {
 
 .search_box>input {
     font-size: 1.1em;
-    padding: 10px 30px;
+    padding: 10px 5vw;
     border: 2px solid black;
     border-radius: 10px 1px 1px 10px;
     ;
@@ -80,10 +82,8 @@ body {
     padding: 5px 5px;
 }
 
-.nav_links span:hover {
-    /* border: 1px solid black; */
-    background-image: linear-gradient(lightgreen, bisque, skyblue);
-    /* box-shadow: 0px 0px 20px 5px white; */
+.nav_links span>a:active {
+    color: red;
 }
 
 
@@ -201,16 +201,17 @@ body {
 /* Styling section headphones */
 
 
-.headphones{
+.headphones {
     width: 80vw;
     margin: 5vh auto;
 }
 
-.trending-headphones{
+.trending-headphones {
     font-size: 3em;
+    text-decoration: underline;
 }
 
-.headphone_cards{
+.headphone_cards {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     text-align: center;
@@ -220,7 +221,7 @@ body {
     scrollbar-width: none;
 }
 
-.card{
+.card {
     /* border: 3px solid black; */
     position: relative;
     width: 300px;
@@ -230,36 +231,36 @@ body {
     background-image: linear-gradient(#9CECFB, #65C7F7);
 }
 
-.headphone-brand-name{
+.headphone-brand-name {
     margin-top: 15px;
     font-size: 2.5em;
     font-weight: bold;
     cursor: pointer;
 }
 
-.headphone-brand-name:hover{
+.headphone-brand-name:hover {
     text-decoration: underline;
 }
 
-.headphone_price{
+.headphone_price {
     margin: 15px 0px;
     font-size: 1.3em;
 }
 
-.card button{
+.card button {
     font-size: 25px;
     padding: 5px 20px;
     border-radius: 20px;
     cursor: pointer;
 }
 
-.card img{
+.card img {
     height: 30vh;
     width: 250px;
     border-radius: 15px;
 }
 
-.card_1::after{
+.card_1::after {
     content: "1";
 
     position: absolute;
@@ -276,7 +277,7 @@ body {
     z-index: 2;
 }
 
-.card_2::after{
+.card_2::after {
     content: "2";
 
     position: absolute;
@@ -293,7 +294,7 @@ body {
     z-index: 2;
 }
 
-.card_3::after{
+.card_3::after {
     content: "3";
 
     position: absolute;
@@ -310,7 +311,7 @@ body {
     z-index: 2;
 }
 
-.card_4::after{
+.card_4::after {
     content: "4";
 
     position: absolute;
@@ -327,7 +328,7 @@ body {
     z-index: 2;
 }
 
-.card_5::after{
+.card_5::after {
     content: "5";
 
     position: absolute;
@@ -342,4 +343,137 @@ body {
     -webkit-text-stroke: 3px black;
 
     z-index: 2;
+}
+
+
+/* styling featured product */
+
+.featured_product {
+    width: 80vw;
+    margin: 5vh auto;
+}
+
+.fphead {
+    font-size: 3em;
+    text-decoration: underline;
+    padding: 15px 0px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+
+.product {
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 2vh;
+    padding: 8px;
+    border-radius: 20px;
+    background-image: linear-gradient(#DCFFBD, #CC86D1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+.product img {
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.productname {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.productprice {
+    font-size: 20px;
+    padding: 15px 0px;
+}
+
+.productbutton {
+    padding: 5px 20px;
+    border-radius: 30px;
+}
+
+
+/* styling footer  */
+
+footer {
+    background-color: black;
+    padding: 5vh 0px;
+}
+
+.footer {
+    font-size: 25px;
+    width: 70vw;
+    margin: auto;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vw;
+}
+
+.contact ul li {
+    padding-bottom: 20px;
+}
+
+.contact ul li a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.contact ul li a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* styling banner */
+
+
+.offer {
+    width: 80vw;
+    margin: auto;
+    height: 50vh;
+}
+
+.banner {
+    width: 80vw;
+    height: 50vh;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+}
+
+.banner:hover {
+    transform: scale(102%);
 }
