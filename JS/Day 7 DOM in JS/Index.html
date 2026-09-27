@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in JS</title>
+</head>
+
+<body>
+    <h1 id="title">Hello World</h1>
+    <h1 id="title1">Hello World</h1>
+    <p id="message">I am learning JavaScript</p>
+
+    <script>
+        let heading = document.getElementById("title")
+        let heading1 = document.getElementById("title1")
+
+        //    textContent is use to access element data 
+        console.log(heading.textContent)
+
+        //    Question — Change Text Using textContent
+        heading.innerHTML = "Hello <span>JavaScript</span>"
+        heading1.textContent = "Hello <span>JavaScript</span>"
+
+        let message = document.getElementById("message")
+        console.log(message.textContent)
+        console.log(message.innerHTML = "I am learning DOM")
+    </script>
+</body>
+
+</html>
