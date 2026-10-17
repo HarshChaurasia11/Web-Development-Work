@@ -1,0 +1,81 @@
+<!-- The Local storage Manager : You are working on an note-taking AudioParamMap, and you want to implement a function named saveNoteToLocalStorage that take a note object and saves it to the browser's local Storage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Local Sorage</title>
+    <style>
+        body{
+            background:radial-gradient(bisque);
+        }
+
+        .all{
+            height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button{
+            font-size: 45px;
+            padding: 5px 35px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 5px 5px purple;
+        }
+        
+        button:hover{
+            box-shadow:inset 0px 0px 20px 15px purple;
+            /* background-color: blueviolet; */
+        }
+        
+        button:active{
+            box-shadow:inset 0px 0px 20px 15px skyblue;
+
+        }
+
+        .note{
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .note:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <button>Add Note</button>
+        <div class="note"></div>
+
+    </div>
+    <script>
+        
+        function saveNoteToLocalStorage(note) {
+            localStorage.setItem("note", note)
+        }
+        
+        let note = localStorage.getItem("note")
+        if(note){
+            document.querySelector(".note").innerHTML = note
+
+        }
+        
+        document.querySelector("button").addEventListener("click", ()=>{
+                let note = prompt("Enter your name")
+                saveNoteToLocalStorage(note)
+                document.querySelector(".note").innerHTML = note
+
+            })
+       
+
+        saveNoteToLocalStorage(note);
+    </script>
+</body>
+</html>
