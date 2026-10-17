@@ -1,0 +1,145 @@
+<!-- The Window Scroller: You are developing a single-page application with a smooth scrolling effect. Implement a function named smoothScrollToTop that smoothly scrolls the window to the top when called. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Window Scroll</title>
+    <style>
+        body {
+            min-height: 150vh;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 50px;
+        }
+
+        p {
+            width: 90vw;
+            font-size: 25px;
+            margin: 15px auto;
+        }
+
+        button {
+            position: relative;
+            bottom: 0px;
+            display: block;
+            margin: 20px auto;
+            font-size: 30px;
+            padding: 5px 40px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="solar-system-article">
+        <h1>The Solar System: An Amazing Journey Through Our Cosmic Neighborhood</h1>
+
+        <p>
+            The Solar System is a vast and fascinating cosmic family, with the Sun at its center. Because of the Sun’s
+            powerful gravity, it holds together eight planets, several dwarf planets, hundreds of moons, thousands of
+            asteroids, and countless comets. Our Earth is also a member of this solar family and completes one orbit
+            around the Sun in approximately 365 days. According to scientists, the Solar System formed about 4.6 billion
+            years ago from a giant cloud of gas and dust.
+        </p>
+
+        <p>
+            The most important and largest member of the Solar System is the Sun. It is a star, not a planet. The Sun
+            has an extremely hot surface and is the primary source of light and energy for our planetary system. Much of
+            the energy needed for photosynthesis, weather, climate, and life on Earth comes from the Sun. Without the
+            Sun, life on Earth would be almost impossible.
+        </p>
+
+        <p>
+            There are eight planets in the Solar System: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and
+            Neptune. These planets are mainly divided into two groups: inner planets and outer planets. Mercury, Venus,
+            Earth, and Mars are called inner or rocky planets because they have solid, rocky surfaces. Jupiter, Saturn,
+            Uranus, and Neptune are known as outer planets; they are much larger and are mostly made of gases and ice.
+        </p>
+
+        <p>
+            Mercury is the planet closest to the Sun. It is the smallest planet in the Solar System, and the temperature
+            difference between its day and night is extreme. Mercury has no moons and has a very thin atmosphere.
+            Because it is so close to the Sun, it completes its orbit around the Sun very quickly.
+        </p>
+
+        <p>
+            Venus is often called Earth’s “twin planet” because its size is similar to Earth’s. However, Venus has a
+            very thick atmosphere, mainly composed of carbon dioxide. This creates an intense greenhouse effect, making
+            Venus the hottest planet in the Solar System. Venus can often be seen shining brightly in the sky during
+            early morning or evening, which is why it is also called the “Morning Star” or “Evening Star.”
+        </p>
+
+        <p>
+            Earth is our home and, so far, the only known planet where life exists. Its atmosphere, water, suitable
+            temperature, and ideal distance from the Sun make it perfect for living organisms. Earth has one natural
+            satellite, known as the Moon. The Moon plays an important role in creating ocean tides and lights up the
+            night sky.
+        </p>
+
+        <p>
+            Mars is known as the Red Planet because iron oxide on its surface gives it a reddish appearance. Scientists
+            are searching Mars for signs of water and possible ancient life. The planet has many large volcanoes and
+            deep valleys. Researchers are also studying the possibility of humans living on Mars in the future.
+        </p>
+
+        <p>
+            Jupiter is the largest planet in the Solar System. It is so huge that hundreds of Earths could fit inside
+            it. Jupiter is mainly made of hydrogen and helium gases. Its surface experiences massive storms, the most
+            famous being the “Great Red Spot.” Jupiter has many moons, some of which may contain ice and water beneath
+            their surfaces.
+        </p>
+
+        <p>
+            Saturn is famous for its beautiful rings. These rings are made of small pieces of ice, dust, and rock. Like
+            Jupiter, Saturn is a gas giant, but it has a very low density. Saturn also has many moons, and its moon
+            Titan is especially famous because it has a thick atmosphere.
+        </p>
+
+        <p>
+            Uranus and Neptune are the farthest planets in the Solar System. They are called ice giants because they
+            contain substances such as water, methane, and ammonia in frozen form. Uranus is known for its unusual
+            tilted axis, while Neptune is the most distant planet from the Sun. Temperatures on these planets are
+            extremely low, and their environments are very harsh.
+        </p>
+
+        <p>
+            Besides planets, the Solar System also contains several dwarf planets, including the well-known Pluto. Pluto
+            was once considered the ninth planet, but it was later reclassified as a dwarf planet. Dwarf planets orbit
+            the Sun, but they are smaller and have less gravitational influence than full-sized planets.
+        </p>
+
+        <p>
+            The Solar System also includes asteroids, comets, and meteoroids. Asteroids are mostly found in the asteroid
+            belt located between Mars and Jupiter. Comets are made of ice, dust, and gas; when they come close to the
+            Sun, they develop bright glowing tails. Meteoroids are small space rocks that sometimes enter Earth’s
+            atmosphere and appear as meteors, commonly called shooting stars.
+        </p>
+
+        <p>
+            The Solar System is not just a collection of planets; it is a living example that helps us understand the
+            universe. By studying it, scientists learn how Earth formed, how life developed, and whether life could
+            exist on other planets. Through spacecraft, telescopes, and scientific research, humanity continues to
+            discover new mysteries of our Solar System every day.
+        </p>
+    </article>
+
+    <button onclick="smoothScrollToTop()">Go to Top</button>
+
+    <script>
+        function smoothScrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+</body>
+
+</html>
